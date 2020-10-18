@@ -138,17 +138,61 @@ Cette requête affichera toutes les colonnes (id_post + id_topoc + content + aut
 
 ### Modifier un Topic
 
+    **POST** http://localhost/API/CDA/modifier_topic.php
+
+**Paramètres**
+
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+id_topic	| Oui		| Int	| Aucune 				| Préciser ici l'id du topic  												| Non Applicable
+title	| Oui 		| String	| Aucune 				| Préciser ici le nouveau titre complet (espaces inclus)												| Non Applicable
 
+
+**Informations complémentaires**
+
+Il est impossible de modifier l'id_topic. En revanche, il est obligatoire de la fournir (clé de reconnaissance) afin de modifier la colonne title.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Le topic a bien été changé." 
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/modifier_topic.php Key = id_topic Keyvalue = "1" Key = title Keyvalue = "Voici le nouveau titre"
+
+Cette requête modifiera la colonne title de la ligne correspondant à l'id_topic 1 en "Voici le nouveau titre".
 
 ### Modifier un Post
 
+    **POST** http://localhost/API/CDA/modifier_post.php
+
+**Paramètres**
 
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+id_post	| Oui		| Int	| Aucune 				| Préciser ici l'id du topic  												| Non Applicable
+title	| Oui 		| String	| Aucune 				| Préciser ici le nouveau titre complet (espaces inclus)												| Non Applicable
+
+
+**Informations complémentaires**
+
+Il est impossible de modifier l'id_topic. En revanche, il est obligatoire de la fournir (clé de reconnaissance) afin de modifier la colonne title.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Le topic a bien été changé." 
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/modifier_post.php Key = id_post Keyvalue = "1" Key = author Keyvalue = "Cyril"
+
+Cette requête modifiera la colonne author de la ligne correspondant à l'id_post 1 en "Cyril".
 
 ### Suprrimer un Topic
 
