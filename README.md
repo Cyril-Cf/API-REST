@@ -34,9 +34,9 @@ La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titr
 **Format de la réponse**
 
 	{
-	"sucess ": true,
-  "message": "Le topic a bien été ajouté."
-	}
+	"sucess ": true, 
+	"message": "Le topic a bien été ajouté.
+	},
 
 **Exemple**
 
