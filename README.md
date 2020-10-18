@@ -51,9 +51,9 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 
 ### Créer un Post
 
-**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												
 
 ### Afficher un Topic
 
