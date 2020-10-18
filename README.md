@@ -203,4 +203,4 @@ Seul l'id_post permet de faire cette requête.
 
     **POST** http://localhost/API/CDA/supp_post.php Key = id_post Keyvalue = "1"
 
-Cette requête supprimera le topic avec l'id_topic 1 de la table.
+Cette requête supprimera le topic avec l'id_post 1 de la table.
