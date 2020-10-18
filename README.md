@@ -22,5 +22,8 @@ POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" 
 
 **Paramètres**
 
-**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																|
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 	
+**Nom**	title	
+**Requis**	Oui
+**Type**	String	
+**Valeur par défaut**	Aucune
+**Description**	ressource title pour l'ajout du topic
