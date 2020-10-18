@@ -17,7 +17,7 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 ### Créer un Topic
 
-    **POST** http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
+    **POST** http://localhost/API/CDA/ajouter_topic.php
 
 **Paramètres**
 
@@ -51,6 +51,9 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 
 ### Créer un Post
 
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
 
 ### Afficher un Topic
 
