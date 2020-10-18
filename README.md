@@ -21,15 +21,15 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 **Paramètres**
 
-*Nom*			title
+*Nom :*			title
 
-*Requis*   		Oui
+*Requis :*   		Oui
 
-*Type*			String
+*Type :*			String
 
-*Valeur par défaut*	Aucune
+*Valeur par défaut :*	Aucune
 
-*Description*		Préciser ici le titre en body de la requête POST pour l'ajout du topic
+*Description :*		Préciser ici le titre en body de la requête POST pour l'ajout du topic
 
 
 **Précisions**
