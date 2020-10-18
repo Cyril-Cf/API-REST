@@ -17,7 +17,7 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 ### Créer un Topic
 
-    **POST** https://www.api.tanaguru.com/v1.0/service/auditPage
+    **POST** http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
 
 POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
 
@@ -27,7 +27,7 @@ POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" 
 **Requis**	Oui
 **Type**	String	
 **Valeur par défaut**	Aucune
-**Description**	ressource title pour l'ajout du topic
+**Description**	préciser ici le titre en body de la requête POST pour l'ajout du topic
 
 **Précisions**
 
@@ -43,7 +43,5 @@ La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titr
 **exemple**
 
     **POST** http://localhost/API/CDA/ajouter_topic.php Key = title Keyvalue = "Ceci est un exemple"
-
-POST http://localhost/API/CDA/ajouter_topic.php Key = title Keyvalue = "Ceci est un exemple"
 
 Cette requête ajoutera un topic à la table, avec comme title "ceci est un exemple", et un id_topic unique automatiquement attribué.
