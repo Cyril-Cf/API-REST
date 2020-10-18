@@ -17,6 +17,8 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 ### Créer un Topic
 
+    **POST** https://www.api.tanaguru.com/v1.0/service/auditPage
+
 POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
 
 **Paramètres**
