@@ -18,7 +18,7 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 ### Créer un Topic
 
 
-**POST** http://localhost/API/CDA/ajouter_topic.php 
+POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
 
 **Paramètres**
 
