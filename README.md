@@ -11,7 +11,7 @@ Au niveau hierarchique, chaque fichier.php comprennant les endpoints appelle en 
 
 ## Messages d'erreur
 
-Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en compte, avec notamment des messages d'erreur explicites pour les clients. De plus, le code intègre directement la prise en compte des erreurs de typage, limitant la déclaration de paramètres non attendus par la base de données (chaînes de caractères, entiers, date).
+Afin de faciliter l'utilisation de l'API, différents cas d'usage ont été pris en compte, avec notamment des messages d'erreur explicites pour le client. De plus, le code intègre directement la prise en compte des erreurs de typage, limitant la déclaration de paramètres non attendus par la base de données (mauvais format pour les chaînes de caractères, entiers, ous dates).
 
 ## Liste des actions disponibles 
 
@@ -77,11 +77,33 @@ Cette requête ajoutera un post lié au topic 1, qui dira "Voici le premier post
 
 ### Afficher un Topic
 
+    **POST** http://localhost/API/CDA/afficher_topic.php
+
+**Paramètres**
 
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+id_topic	| Oui mais seul		| Int	| Aucune 				| Préciser ici l'id du topic  												| Non Applicable
+title	| Oui mais seul 		| String	| Aucune 				| Préciser ici le titre complet												| Non Applicable
 
+
+**Informations complémentaires**
+
+La recherche de topic se fera soit via l'id_topic, soit via le titre complet (espaces inclus), mais jamais les deux à la fois. Ainsi, un seul paramètre est attendu, au choix de l'utilisateur.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Voici le topic:" 
+	"resultast""topic" = "",
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/afficher_topic.php Key = id_topic Keyvalue = "1"
+
+Cette requête affichera toutes les colonnes (id_post + title) de la ligne correspondant à l'id_topic 1.
 
 ### Afficher un Post
 
