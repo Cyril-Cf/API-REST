@@ -115,7 +115,7 @@ Cette requête affichera toutes les colonnes (id_post + title) de la ligne corre
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
 id_topic	| Oui mais seul		| Int	| Aucune 				| Préciser ici l'id du topic  												| Non Applicable
 author	| Oui mais seul 		| String	| Aucune 				| Préciser ici l'auteur (nom complet)												| Non Applicable
-date	| Oui mais seul 		| String	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd h : m : s												| Non Applicable
+date	| Oui mais seul 		| DateTime	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd h : m : s												| Non Applicable
 
 
 **Informations complémentaires**
