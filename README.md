@@ -152,14 +152,55 @@ Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 
 
 ### Suprrimer un Topic
 
+    **POST** http://localhost/API/CDA/supp_topic.php
+
+**Paramètres**
+
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+id_post	| Oui 		| Int	| Aucune 				| Préciser ici l'id_topic 												| Non Applicable
 
+**Informations complémentaires**
+
+Seul l'id_topic permet de faire cette requête.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Le topic a bien été supprimé.
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/supp_topic.php Key = id_topic Keyvalue = "1"
+
+Cette requête supprimera le topic avec l'id_topic 1 de la table.
 
 ### Supprimer un Post
 
 
+    **POST** http://localhost/API/CDA/supp_post.php
+
+**Paramètres**
+
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+id_post	| Oui 		| Int	| Aucune 				| Préciser ici l'id_post 												| Non Applicable
+
+**Informations complémentaires**
+
+Seul l'id_post permet de faire cette requête.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Le post a bien été supprimé.
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/supp_post.php Key = id_post Keyvalue = "1"
+
+Cette requête supprimera le topic avec l'id_topic 1 de la table.
