@@ -23,19 +23,7 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| NA
-
-
-*Nom :*			title
-
-*Requis :*   		Oui
-
-*Type :*			String
-
-*Valeur par défaut :*	Aucune
-
-*Description :*		Préciser ici le titre en body de la requête POST pour l'ajout du topic
-
+Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| Non Applicable
 
 **Informations complémentaires**
 
