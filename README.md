@@ -29,7 +29,7 @@ POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" 
 
 **Précisions**
 
-La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
+La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
 
 **Format de la réponse**
 
@@ -38,4 +38,8 @@ La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titr
 	"message": "Le topic a bien été ajouté.
 	}
 
+**exemple**
 
+POST http://localhost/API/CDA/ajouter_topic.php Key = title Keyvalue = "Ceci est un exemple"
+
+Cette requête ajoutera un topic à la table, avec comme title "ceci est un exemple", et un id_topic unique automatiquement attribué.
