@@ -127,7 +127,7 @@ La recherche de post se fera soit via l'id_topic, soit via l'auteur (nom complet
 	{
 	"sucess ": true, 
 	"message": "Voici le post:" 
-	"resultats""topic" = "",
+	"resultats""post" = "",
 	}
 
 **exemple**
