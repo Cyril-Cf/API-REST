@@ -21,6 +21,11 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 **Paramètres**
 
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| NA
+
+
 *Nom :*			title
 
 *Requis :*   		Oui
@@ -51,23 +56,49 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 
 ### Créer un Post
 
-**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>						
 
 ### Afficher un Topic
+
+
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
 
 
 ### Afficher un Post
 
 
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+
 ### Modifier un Topic
+
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
 
 
 ### Modifier un Post
 
 
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+
 ### Suprrimer un Topic
+
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
 
 
 ### Supprimer un Post
+
+
+**Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
+----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
+Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
