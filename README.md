@@ -17,7 +17,6 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
 ### Créer un Topic
 
-
 POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
 
 **Paramètres**
@@ -27,3 +26,17 @@ POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" 
 **Type**	String	
 **Valeur par défaut**	Aucune
 **Description**	ressource title pour l'ajout du topic
+
+**Précisions**
+
+La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true,
+  "message": "Le topic a bien été ajouté."
+	}
+
+**Exemple**
+
