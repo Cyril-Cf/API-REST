@@ -53,7 +53,7 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 id_topic	| Oui 		| Int	| Aucune 				| Préciser ici l'id du topic unique associé à ce post 												| Non Applicable
 content	| Oui 		| String	| Aucune 				| Préciser ici le contenu du post 												| Non Applicable
 author	| Oui 		| String	| Aucune 				| Préciser ici l'auteur du post 												| Non Applicable
-date	| Oui 		| DateTime	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd h:m:s 												| Non Applicable
+date	| Oui 		| DateTime	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd h : m : s 												| Non Applicable
 
 **Informations complémentaires**
 
@@ -72,7 +72,7 @@ Conformément au diagramme des ressources, un post appartient obligatoirement à
 
     **POST** http://localhost/API/CDA/ajouter_post.php Key = id_topic Keyvalue = "1" Key = content Keyvalue = "Voici le premier post lié au topic 1." Key = author Keyvalue = "Cyril" Key = date Keyvalue = "2020-10-18 12:00:00"
 
-Cette requête ajoutera un post à la table avec son id_post et l'association via son id_topic unique à l'autre table.
+Cette requête ajoutera un post lié au topic 1, crée par Cyril, qui dira "Voici le premier post lié au topic 1." et daté au 18 octobre 2020 à midi. Il comprendra bien son id_post et l'association à la table topics via son id_topic unique.
 
 
 ### Afficher un Topic
