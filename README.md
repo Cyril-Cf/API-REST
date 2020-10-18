@@ -42,6 +42,8 @@ La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titr
 
 **exemple**
 
+    **POST** http://localhost/API/CDA/ajouter_topic.php Key = title Keyvalue = "Ceci est un exemple"
+
 POST http://localhost/API/CDA/ajouter_topic.php Key = title Keyvalue = "Ceci est un exemple"
 
 Cette requête ajoutera un topic à la table, avec comme title "ceci est un exemple", et un id_topic unique automatiquement attribué.
