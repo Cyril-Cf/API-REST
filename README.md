@@ -96,7 +96,7 @@ La recherche de topic se fera soit via l'id_topic, soit via le titre complet (es
 	{
 	"sucess ": true, 
 	"message": "Voici le topic:" 
-	"resultast""topic" = "",
+	"resultats""topic" = "",
 	}
 
 **exemple**
@@ -107,10 +107,34 @@ Cette requête affichera toutes les colonnes (id_post + title) de la ligne corre
 
 ### Afficher un Post
 
+    **POST** http://localhost/API/CDA/afficher_post.php
+
+**Paramètres**
 
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>
+id_topic	| Oui mais seul		| Int	| Aucune 				| Préciser ici l'id du topic  												| Non Applicable
+author	| Oui mais seul 		| String	| Aucune 				| Préciser ici l'auteur (nom complet)												| Non Applicable
+date	| Oui mais seul 		| String	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd h : m : s												| Non Applicable
+
+
+**Informations complémentaires**
+
+La recherche de post se fera soit via l'id_topic, soit via l'auteur (nom complet espaces inclus), soit via la date (au format yyyy-mm-dd h : m : s), sans jamais cumuler les paramètres. Ainsi, un seul paramètre est attendu, au choix de l'utilisateur.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Voici le post:" 
+	"resultats""topic" = "",
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/afficher_post.php Key = id_post Keyvalue = "1"
+
+Cette requête affichera toutes les colonnes (id_post + id_topoc + content + author + date) de la ligne correspondant à l'id_post 1.
 
 ### Modifier un Topic
 
