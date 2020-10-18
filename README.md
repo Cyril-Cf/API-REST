@@ -44,9 +44,32 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 
 ### Créer un Post
 
+    **POST** http://localhost/API/CDA/ajouter_post.php
+
+**Paramètres**
+
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Authorization	| Oui 		| String	| Aucune 				| Jeton d'authentification utilisé 												| bearer <valeur de jeton>						
+Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| Non Applicable
+Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| Non Applicable
+
+**Informations complémentaires**
+
+La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
+
+**Format de la réponse**
+
+	{
+	"sucess ": true, 
+	"message": "Le post a bien été ajouté.
+	}
+
+**exemple**
+
+    **POST** http://localhost/API/CDA/ajouter_post.php Key = title Keyvalue = "Ceci est un exemple"
+
+Cette requête ajoutera un post à la table, avec comme titre "ceci est un exemple", et un id_topic unique automatiquement attribué.
+
 
 ### Afficher un Topic
 
