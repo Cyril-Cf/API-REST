@@ -53,13 +53,13 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 id_topic	| Oui 		| Int	| Aucune 				| Préciser ici l'id du topic unique associé à ce post 												| Non Applicable
 content	| Oui 		| String	| Aucune 				| Préciser ici le contenu du post 												| Non Applicable
 author	| Oui 		| String	| Aucune 				| Préciser ici l'auteur du post 												| Non Applicable
-date	| Oui 		| DateTime	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd H:m:s 												| Non Applicable
+date	| Oui 		| DateTime	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd h:m:s 												| Non Applicable
 
 **Informations complémentaires**
 
-La table posts comporte également un id_post. Comme pour la création d'un topic, l'ajout d'un nouveau post ne nécessite pas la déclaration de l'id_post, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien cet attribut.
+La table posts comporte également une colonne id_post. Comme pour la création d'un topic, l'ajout d'un nouveau post ne nécessite pas la déclaration de l'id_post, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien cet attribut.
 
-Conformément au diagramme des ressources, un post appartient obligatoirement à un Topic unique. Pour cela, la table comprends la colonne id_topic qui précisera la connexion avec la table topics. Cet élément est donc à déclarer au moment de la création du post.
+Conformément au diagramme des ressources, un post appartient obligatoirement à un Topic unique. Pour cela, la table posts comprends la colonne id_topic qui précisera la connexion avec la table topics. Cet élément est donc à déclarer obligatoirement au moment de la création du post.
 
 **Format de la réponse**
 
