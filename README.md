@@ -19,15 +19,13 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 
     **POST** http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
 
-POST | http://localhost/API/CDA/ajouter_topic.php | Key = title | Keyvalue = "" |
-
 **Paramètres**
 
-**Nom**	title	
-**Requis**	Oui
-**Type**	String	
-**Valeur par défaut**	Aucune
-**Description**	préciser ici le titre en body de la requête POST pour l'ajout du topic
+*Nom*	title	
+*Requis*	Oui
+*Type*	String	
+*Valeur par défaut*	Aucune
+*Description*	préciser ici le titre en body de la requête POST pour l'ajout du topic
 
 **Précisions**
 
