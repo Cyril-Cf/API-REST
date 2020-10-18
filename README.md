@@ -174,18 +174,22 @@ Cette requête modifiera la colonne title de la ligne correspondant à l'id_topi
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
 id_post	| Oui		| Int	| Aucune 				| Préciser ici l'id du topic  												| Non Applicable
-title	| Oui 		| String	| Aucune 				| Préciser ici le nouveau titre complet (espaces inclus)												| Non Applicable
+content	| Oui mais seul 		| String	| Aucune 				| Préciser ici le nouveau contenu complet (espaces inclus)												| Non Applicable
+author	| Oui mais seul 		| String	| Aucune 				| Préciser ici le nouvel auteur complet (espaces inclus)												| Non Applicable
+date	| Oui mais seul 		| DateTime	| Aucune 				| Préciser ici la nouvelle date au format yyyy-mm-dd h : m : s 												| Non Applicable
 
 
 **Informations complémentaires**
 
-Il est impossible de modifier l'id_topic. En revanche, il est obligatoire de la fournir (clé de reconnaissance) afin de modifier la colonne title.
+Il est impossible de modifier l'id_post. En revanche, il est obligatoire de la fournir (clé de reconnaissance) afin de modifier les autres éléments. Il est également impossible de modifier l'id_topic. 
+
+Les éléments ne peuvent être remplacés qu'un par un au moyen de la clé de reconnaissance (id_post). Ainsi, il faudra associer dans la requête l'id_post + l'élément à modifier sans avoir besoin de préciser les autres colonnes de la table pour la ligne concernée.
 
 **Format de la réponse**
 
 	{
 	"sucess ": true, 
-	"message": "Le topic a bien été changé." 
+	"message": "Le post a bien été changé." 
 	}
 
 **exemple**
