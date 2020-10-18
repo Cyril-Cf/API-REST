@@ -32,7 +32,7 @@ Afin de faciliter l'utilisation de l'API, les cas d'usage ont été pris en comp
 *Description :*		Préciser ici le titre en body de la requête POST pour l'ajout du topic
 
 
-**Précisions**
+**Informations complémentaires**
 
 La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
 
