@@ -27,7 +27,7 @@ Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requ�
 
 **Informations complémentaires**
 
-La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
+La table topics comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
 
 **Format de la réponse**
 
@@ -50,12 +50,16 @@ Cette requête ajoutera un topic à la table, avec comme titre "ceci est un exem
 
 **Nom**			| **Requis**| **Type** 	| **Valeur par défaut**	| **Description**																| **Valeur possible**
 ----------------|-----------|-----------|-----------------------|-------------------------------------------------------------------------------|----------------------
-Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| Non Applicable
-Title	| Oui 		| String	| Aucune 				| Préciser ici le titre en body de la requête POST pour l'ajout du topic 												| Non Applicable
+id_topic	| Oui 		| Int	| Aucune 				| Préciser ici l'id du topic unique associé à ce post 												| Non Applicable
+content	| Oui 		| String	| Aucune 				| Préciser ici le contenu du post 												| Non Applicable
+author	| Oui 		| String	| Aucune 				| Préciser ici l'auteur du post 												| Non Applicable
+date	| Oui 		| DateTime	| Aucune 				| Préciser ici la date du post au format yyyy-mm-dd H:m:s 												| Non Applicable
 
 **Informations complémentaires**
 
-La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titre ne nécessite pas la déclaration de l'id_topic, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien un attribut dans chaque colonne.
+La table posts comporte également un id_post. Comme pour la création d'un topic, l'ajout d'un nouveau post ne nécessite pas la déclaration de l'id_post, qui s'incrémente automatiquement (numero du dernier id_topic + 1) au moment de la requête. Chaque ressource possédera donc bien cet attribut.
+
+Conformément au diagramme des ressources, un post appartient obligatoirement à un Topic unique. Pour cela, la table comprends la colonne id_topic qui précisera la connexion avec la table topics. Cet élément est donc à déclarer au moment de la création du post.
 
 **Format de la réponse**
 
@@ -66,9 +70,9 @@ La table topic comporte 2 colonnes : id_topic + title. L'ajout d'un nouveau titr
 
 **exemple**
 
-    **POST** http://localhost/API/CDA/ajouter_post.php Key = title Keyvalue = "Ceci est un exemple"
+    **POST** http://localhost/API/CDA/ajouter_post.php Key = id_topic Keyvalue = "1" Key = content Keyvalue = "Voici le premier post lié au topic 1." Key = author Keyvalue = "Cyril" Key = date Keyvalue = "2020-10-18 12:00:00"
 
-Cette requête ajoutera un post à la table, avec comme titre "ceci est un exemple", et un id_topic unique automatiquement attribué.
+Cette requête ajoutera un post à la table avec son id_post et l'association via son id_topic unique à l'autre table.
 
 
 ### Afficher un Topic
