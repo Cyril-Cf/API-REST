@@ -2,6 +2,8 @@
 
 ## API pour la selection CDA
 
+![UML](/selection-uml.jpg) 
+
 Cette API a été codée en PHP / requêtes SQL pour (et testée sur) un serveur et une base de données en local (via Apache + MySQL). Les ressources correspondent au diagramme "selection-uml.jpg" également présent dans le repo. Afin de répondre à la convention d'une API REST, chaque endpoint renverra en format JSON :
 - sucess (true or false)
 - message (erreur spécifiée ou execution correcte)
